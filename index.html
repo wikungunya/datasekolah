@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Siswa SD Negeri 2 Pandansari</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="top-nav">
+        <div class="logo-area">
+            <img src="https://via.placeholder.com/30" alt="Logo Sekolah" class="school-logo">
+            <span>Data Siswa SD Negeri 2 Pandansari</span>
+        </div>
+        <div class="top-nav-links">
+            <a href="#" class="active">Home</a>
+            <span>2</span>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <h1>Data Siswa SD Negeri 2 Pandansari</h1>
+        <button class="dark-mode-toggle" id="darkModeBtn">
+            <i class="fa-regular fa-moon"></i>
+        </button>
+    </header>
+
+    <main class="container">
+        <div class="tab-container">
+            <button class="tab-btn active"><i class="fa-regular fa-file-lines"></i> Biodata</button>
+            <button class="tab-btn"><i class="fa-solid fa-chart-bar"></i> Infografis</button>
+        </div>
+
+        <section class="filter-card">
+            <div class="filter-grid">
+                <div class="filter-group">
+                    <label for="filterKelas">Filter Kelas</label>
+                    <select id="filterKelas">
+                        <option value="">Semua Kelas</option>
+                        </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filterNama">Filter Nama</label>
+                    <select id="filterNama">
+                        <option value="">Semua Nama</option>
+                        </select>
+                </div>
+
+                <div class="filter-group text-search">
+                    <label for="searchCepat">Pencarian Cepat</label>
+                    <input type="text" id="searchCepat" placeholder="Golet apa...">
+                </div>
+
+                <div class="btn-group">
+                    <button id="btnReset" class="btn btn-secondary">Reset Data</button>
+                    <button id="btnAdmin" class="btn btn-primary">Admin</button>
+                </div>
+            </div>
+
+            <div class="meta-controls">
+                <div class="entries-control">
+                    Tampilkan: 
+                    <select id="entriesPerPage">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                    baris per halaman
+                </div>
+                <div class="total-info">
+                    Total: <span id="totalSiswa">0</span> siswa
+                </div>
+            </div>
+        </section>
+
+        <section class="table-container">
+            <table id="siswaTable">
+                <thead>
+                    <tr>
+                        <th rowspan="2" style="width: 40px;">No</th>
+                        <th rowspan="2">Nama</th>
+                        <th rowspan="2">NIK</th>
+                        <th rowspan="2">Tempat Lahir</th>
+                        <th rowspan="2">Tanggal Lahir</th>
+                        <th rowspan="2">Kelas</th>
+                        <th rowspan="2">NISN</th>
+                        <th rowspan="2">NIS</th>
+                        <th rowspan="2">Alamat</th>
+                        <th colspan="2" class="text-center">Orang Tua</th>
+                    </tr>
+                    <tr>
+                        <th class="sub-th">Nama Ayah</th>
+                        <th class="sub-th">Nama Ibu</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    </tbody>
+            </table>
+        </section>
+
+        <div class="pagination-container" id="pagination">
+            </div>
+    </main>
+
+    <div class="fab">
+        <i class="fa-solid fa-pencil"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
